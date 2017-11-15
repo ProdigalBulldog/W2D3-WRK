@@ -21,3 +21,7 @@ class Array
     index_pair_array
   end
 end
+
+def my_transpose(matrix)
+  return matrix
+end

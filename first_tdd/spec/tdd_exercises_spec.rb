@@ -45,3 +45,29 @@ describe 'Array#two_sum' do
     end
   end
 end
+
+describe '#my_transpose' do
+  let(:matrix){
+    [
+      [7, 3, 2],
+      [7, 4, 0],
+      [6, 1, 5]
+    ]
+  }
+  let(:correct){
+    [
+      [7, 7, 6],
+      [3, 4, 1],
+      [2, 0, 5]
+    ]
+  }
+  let(:transformed){my_transpose(matrix)}
+  
+  it 'should return an array with the same dimensions as the original'
+  
+  it 'should not affect the original array'
+  
+  it 'the last element of the last row will be the same as it was in the original matrix' do
+    expect(matrix.last.last).to eq(transformed.last.last)
+  end
+end
